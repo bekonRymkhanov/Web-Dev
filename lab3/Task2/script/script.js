@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const tasksContainer = document.getElementById('tasks');
 
     todoForm.addEventListener('submit', function(event) {
+      if(taskInput.value.trim()===''){
+        alert("no");
+        return;
+      }
       event.preventDefault();
       addTask(taskInput.value);
       taskInput.value = '';
@@ -19,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
       checkbox.type = 'checkbox';
 
       const taskTextElement = document.createElement('span');
-      taskTextElement.innerText = taskText;
+      taskTextElement.innerText =  taskText;
 
       const deleteBtn = document.createElement('button');
       deleteBtn.classList.add('delete-btn');
