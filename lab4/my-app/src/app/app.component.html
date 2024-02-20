@@ -1,0 +1,51 @@
+<div class="container">
+
+  <div class="arrayNums">
+
+    <div *ngFor="let product of products" class="elements">
+
+      <div class="item-card__image__div">
+        <a [href]="product.refToKaspi" class="item-card__image-wrapper">
+          <img class="item-card__image" [src]="product.image" alt="image">
+        </a>
+        <div class="item-card__sticker">
+          <div>
+            <img [src]="product.sticker_red" style="width: 65px;height: 35px;">
+          </div>
+          <div>
+            <img [src]="product.sticker_green" style="width: 65px; height: 35px;">
+          </div>
+        </div>
+      </div>
+      <div class="item-card__name"  (mouseenter)="product.showDescription = true" (mouseleave)="product.showDescription = false">
+        <a class="item-card__name-link" [title]="product.name + ' details'" [href]="product.refToKaspi">
+          {{ product.name }}
+        </a>
+      </div>
+
+      <div class="item-card__info">
+        <div class="item-card__prices">
+          <span class="item-card__info__key">Цена</span>
+          <span class="item-card__info__value" [title]="product.price + ' price'">{{product.price}} ₸</span>
+        </div>
+        <div class="item-card__prices" id="item-card__prices__second">
+          <span class="item-card__info__key">Отзывы</span>
+          <span class="item-card__info__value" [title]="product.rating + ' rating'">{{product.rating}} ★</span>
+        </div>
+        <div class="item-card__share">
+          <button class="item-card__share__btn" (click)="shareClick(product.refToKaspi)"><img class="item-card__share__btn__img" src="assets/sharing_icon_trimmed.webp"></button>
+        </div>
+
+      </div>
+
+
+
+      <div *ngIf="product.showDescription" class="floating-window">
+        <p>{{ product.description }}</p>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
