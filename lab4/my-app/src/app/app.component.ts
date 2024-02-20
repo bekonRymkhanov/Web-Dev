@@ -115,9 +115,9 @@ let cola=new Product("assets/coca-cola.jpg",
   5.0,
   'https://kaspi.kz/shop/p/coca-cola-classic-gazirovannyi-napitok-2-l-100208094/?c=750000000',
   615);
-let kotex=new Product("assets/kotex.jpg",
-  "Kotex Ultra Normal прокладки 10 шт",
-  "тип: прокладки\n" + "количество в упаковке: 10\n" + "число капель: 4\n" + "страна производства: Россия",
+let kotex=new Product("assets/hmeli.jpg",
+  "Омега специи хмели-сунели 20 г",
+  "страна производства: Казахстан\n" + "вид специй: хмели-сунели\n" + "форма выпуска: измельченный",
   5.0,
-  'https://kaspi.kz/shop/p/kotex-ultra-normal-prokladki-10-sht-100931867/?c=750000000',
-  720);
+  'https://kaspi.kz/shop/p/omega-spetsii-hmeli-suneli-20-g-100983965/?c=750000000',
+  69);
