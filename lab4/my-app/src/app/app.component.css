@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: row;
   padding: 10px;
-  border: red 1px solid;
   flex-wrap: wrap;
 }
 
@@ -12,7 +11,7 @@
   font-size: 14px;
   line-height: 1.2;
   max-width: 210px;
-  border: green 1px solid;
+  border: rgba(200,200,200,0.6) 1px solid;
   display: flex;
   flex-direction: column;
   padding: 21px 14px 10px 14px;
@@ -55,7 +54,7 @@
 
  .item-card__name-link{
   color: #0089d0;
-  border:blue 1px solid;
+   text-decoration: none;
 }
 .item-card__sticker {
   cursor: pointer;
