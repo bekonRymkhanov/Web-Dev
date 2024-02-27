@@ -56,8 +56,7 @@ class Product implements Product{
     this.price=price;
     this.showDescription=false;
   }
-  toggleMessage(){
-  }
+
 }
 
 let type_c_adapter=new Product('assets/63961934823454.jpg',

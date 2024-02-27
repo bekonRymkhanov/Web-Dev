@@ -1,0 +1,17 @@
+<input
+  type="text"
+  class="filter-sort-input"
+  placeholder="filter products..."
+  [(ngModel)]="term"
+>
+<div class="container">
+
+  <div class ="arrayNums" *ngFor="let product of products |filterProducts:term">
+    <app-product
+      *ngIf="product.category.includes(targetCategory)"
+      [product]="product"
+      (removeProduct)="onRemoveProduct($event)" class="elements"></app-product>
+  </div>
+
+</div>
+

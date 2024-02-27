@@ -1,0 +1,11 @@
+<div class="container" *ngFor="let category of categories">
+  <h3>
+    <a [routerLink]="['/categories', category]"
+       routerLinkActive="activebutton" ariaCurrentWhenActive="page">
+      {{category}}
+    </a>
+  </h3>
+</div>
+
+<router-outlet> </router-outlet>
+

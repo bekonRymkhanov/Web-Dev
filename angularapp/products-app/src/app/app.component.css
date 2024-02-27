@@ -1,0 +1,10 @@
+.buttons{
+  display: flex;
+  flex-direction: row;
+}
+
+.categories button{
+  border: none;
+  margin-left: 20px;
+  color:blue;
+}

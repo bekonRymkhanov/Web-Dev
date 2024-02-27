@@ -1,0 +1,25 @@
+.container{
+  display: flex;
+  padding: 10px;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.arrayNums{
+  display: flex;
+  width: fit-content;
+
+
+}
+.elements{
+  font-family: "Roboto",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  max-width: 210px;
+  border: rgba(200,200,200,0.6) 1px solid;
+  display: flex;
+  flex-direction: column;
+  padding: 21px 14px 10px 14px;
+  position: relative;
+}
+
+

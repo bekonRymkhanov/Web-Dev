@@ -1,28 +1,16 @@
 
-.container .arrayNums{
-  display: flex;
-  flex-direction: row;
-  padding: 10px;
-  flex-wrap: wrap;
-}
-
-.container .arrayNums .elements{
-  font-family: "Roboto",Helvetica,Arial,sans-serif;
-  font-size: 14px;
-  line-height: 1.2;
-  max-width: 210px;
-  border: rgba(200,200,200,0.6) 1px solid;
-  display: flex;
-  flex-direction: column;
-  padding: 21px 14px 10px 14px;
-
-}
 .item-card__image__div{
-  position: relative;
   border-bottom: rgba(200,200,200,0.6) 1px solid ;
 }
 
-c
+.item-card__image-wrapper{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 21px;
+  width: 100%;
+  height: 150px;
+  max-height: 150px;
+}
 .item-card__image {
   width: 100%;
   max-height: 100%;
@@ -36,18 +24,18 @@ c
   transition: opacity .3s;
 }
 .item-card__name{
-   overflow: hidden;
-   display: block;
-   height: 34px;
-   margin-bottom: 2px;
+  overflow: hidden;
+  display: block;
+  height: 34px;
+  margin-bottom: 2px;
   padding-top: 20px;
 
 
 }
 
- .item-card__name-link{
+.item-card__name-link{
   color: #0089d0;
-   text-decoration: none;
+  text-decoration: none;
 }
 .item-card__sticker {
   cursor: pointer;
@@ -55,6 +43,27 @@ c
   top: 0px;
   left: 10px;
   z-index: 1;
+}
+.item-card__likes{
+  position: absolute;
+  top:20px;
+  left:80%
+}
+.item-card__likes input[type="checkbox"] {
+  appearance: none;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-size: 9rem;
+  padding: 0.1rem;
+  border: gray 10px solid ;
+  border-radius: 20px;
+  background:gray;
+
+}
+.item-card__likes input[type="checkbox"]:checked{
+  border: red 10px solid;
+  background:red;
 }
 .item-card__info__value{
   font-size: 17px;
@@ -92,9 +101,10 @@ c
 }
 .floating-window{
   position: absolute;
+  top:0px;
+  left:0px;
   max-width: 250px;
   background:rgba(255,255,255,0.7);
-
   z-index: 2;
 
 }

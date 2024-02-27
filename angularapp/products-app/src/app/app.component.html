@@ -1,0 +1,6 @@
+<div class="buttons">
+  <div class="categories" *ngFor="let category of categories">
+    <button (click)="changeCategory(category)">{{category}}</button>
+  </div>
+</div>
+  <app-categories [targetCategory]="targetCategory"></app-categories>
