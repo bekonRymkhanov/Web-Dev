@@ -6,7 +6,7 @@
 <div class="photo-container">
   <div *ngFor="let photo of photos" class="photo-item">
     <div class="photo-img-container">
-      <img [src]="photo.url" alt="{{ photo.title }}">
+      <img [src]="photo.thumbnailUrl" alt="{{ photo.title }}">
     </div>
     <div class="photo-details">
       <h3>{{ photo.id }}</h3>
