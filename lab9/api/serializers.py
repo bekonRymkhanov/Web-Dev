@@ -11,15 +11,11 @@ class CompanySerializer(serializers.Serializer):
 
 
     def create(self, validated_data):
-        """
-        Create and return a new `Snippet` instance, given the validated data.
-        """
+
         return Company.objects.create(**validated_data)
 
     def update(self, instance:Company, validated_data):
-        """
-        Update and return an existing `Snippet` instance, given the validated data.
-        """
+
         instance.name = validated_data.get('name', instance.name)
         instance.city = validated_data.get('city', instance.city)
         instance.address = validated_data.get('address', instance.address)
@@ -40,9 +36,7 @@ class VacancySerializer(serializers.Serializer):
 
 
     def create(self, validated_data):
-        """
-        Create and return a new `Snippet` instance, given the validated data.
-        """
+
         company_data = validated_data.pop('Company')
         company_id = company_data.get('id')
         company_instance = Company.objects.get(id=company_id)
@@ -50,9 +44,7 @@ class VacancySerializer(serializers.Serializer):
         return Vacancy.objects.create(Company=company_instance, **validated_data)
 
     def update(self, instance:Vacancy, validated_data):
-        """
-        Update and return an existing `Snippet` instance, given the validated data.
-        """
+
         instance.name = validated_data.get('name', instance.name)
         instance.salary = validated_data.get('salary', instance.salary)
         instance.description = validated_data.get('description', instance.description)
