@@ -8,6 +8,7 @@ class CompanySerializer(serializers.Serializer):
     description = serializers.CharField()
     city =        serializers.CharField()
     address =     serializers.CharField()
+
     def create(self, validated_data):
 
         return Company.objects.create(**validated_data)
@@ -24,6 +25,15 @@ class CompanySerializer(serializers.Serializer):
     class Meta:
         model = Company
         fields = "__all__"
+
+
+
+class CompanySerializer2(serializers.ModelSerializer):
+    class Meta:
+        model = Company
+        fields = "__all__"
+
+
 
 class VacancySerializer(serializers.Serializer):
     id =          serializers.IntegerField()
@@ -65,3 +75,7 @@ class VacancySerializer(serializers.Serializer):
         fields = "__all__"
 
     
+class VacancySerializer2(serializers.ModelSerializer):
+    class Meta:
+        model = Vacancy
+        fields = "__all__"

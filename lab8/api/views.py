@@ -26,6 +26,7 @@ def listAllCategoriesHandler(request):
         categories = Category.objects.all()
         categories_json = [category.to_json() for category in categories]
         return JsonResponse(categories_json, safe=False)
+    
 
 
 def listOneCategoryHandler(request,pk=None):
