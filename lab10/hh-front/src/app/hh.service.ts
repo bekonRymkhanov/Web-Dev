@@ -39,8 +39,6 @@ export class HHService {
     return this.client.delete(`http://127.0.0.1:8000/api/vacancies/${id}/`)
   }
   postVacancy(newVacancy:Vacancy){
-    console.log(newVacancy.id)
-
     return this.client.post<Vacancy>(`http://127.0.0.1:8000/api/vacancies/`,newVacancy)
   }
   putVacancy(newVacancy:Vacancy){
