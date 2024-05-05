@@ -26,6 +26,7 @@ export class CompaniesComponent implements OnInit{
   companies!:Company[];
   loaded:boolean=false
   newCompany:Company;
+  logged:boolean=false;
 
   constructor(private hhService:HHService)  {
     this.newCompany = {
@@ -40,6 +41,11 @@ export class CompaniesComponent implements OnInit{
 
   ngOnInit(): void {
     this.getCompanies()
+    const access=localStorage.getItem('access');
+    if(access){
+      this.logged=true;
+      this.getCompanies()
+    }
   }
   getCompanies(){
     this.loaded=false;

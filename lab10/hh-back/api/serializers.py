@@ -29,6 +29,7 @@ class CompanySerializer(serializers.Serializer):
 
 
 class CompanySerializer2(serializers.ModelSerializer):
+    user_id=serializers.IntegerField(read_only=True)
     class Meta:
         model = Company
         fields = "__all__"

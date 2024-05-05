@@ -12,3 +12,7 @@ export interface Vacancy{
   "salary":number,
   "Company":Company,
 }
+export interface Token{
+  access:string,
+  refresh:string,
+}

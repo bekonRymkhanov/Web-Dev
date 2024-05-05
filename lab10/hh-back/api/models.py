@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -7,6 +8,7 @@ class Company(models.Model):
     description = models.TextField() 
     city =        models.CharField(max_length=255)
     address =     models.TextField()
+    user = models.ForeignKey(User,on_delete=models.CASCADE,related_name='companies',null=True,blank=True)
 
     def __str__(self) -> str:
         return f"name:{self.name},description:{self.description},city:{self.city},address:{self.address}"

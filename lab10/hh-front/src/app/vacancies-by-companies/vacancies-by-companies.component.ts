@@ -71,7 +71,6 @@ export class VacanciesByCompaniesComponent implements OnInit {
   }
 
   CreateVacancy() {
-    // Consider fetching maxId more efficiently
     this.hhService.getVacancies().subscribe(vac => {
       const maxId = Math.max(...vac.map(vacancy => vacancy.id), 0);
       const copy: Vacancy = {
